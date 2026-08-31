@@ -1,0 +1,12 @@
+{
+  "name": "focinho-feliz-petshop",
+  "version": "1.0.0",
+  "description": "Landing page do Focinho Feliz - pet shop, banho & tosa e day care",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
