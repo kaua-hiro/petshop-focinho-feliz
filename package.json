@@ -1,7 +1,7 @@
 {
-  "name": "focinho-feliz-petshop",
+  "name": "anjos-da-guarda-creche-hotel",
   "version": "1.0.0",
-  "description": "Landing page do Focinho Feliz - pet shop, banho & tosa e day care",
+  "description": "Landing page da Anjos da Guarda - creche canina, hotel e adestramento no Tatuape, SP",
   "private": true,
   "scripts": {
     "start": "node server.js"
