@@ -174,8 +174,8 @@ if (lightbox) {
   const lbClose = document.getElementById("lightboxClose");
 
   const openLightbox = (card) => {
-    const img = card.querySelector(".polaroid__photo img");
-    const caption = card.querySelector(".polaroid__caption");
+    const img = card.querySelector(".ig-post__photo img");
+    const caption = card.querySelector(".ig-post__caption");
     if (!img) return;
     lbImg.src = img.currentSrc || img.src;
     lbImg.alt = img.alt;
@@ -196,7 +196,7 @@ if (lightbox) {
     lightbox.setAttribute("aria-hidden", "true");
   };
 
-  document.querySelectorAll(".polaroid:not(.polaroid--cta)").forEach((card) => {
+  document.querySelectorAll(".ig-post:not(.ig-post--cta)").forEach((card) => {
     card.addEventListener("click", (e) => {
       e.preventDefault();
       openLightbox(card);
@@ -213,7 +213,7 @@ if (igTrack) {
   const prevBtn = document.querySelector(".ig-carousel__nav--prev");
   const nextBtn = document.querySelector(".ig-carousel__nav--next");
   const step = (dir) => {
-    const card = igTrack.querySelector(".polaroid");
+    const card = igTrack.querySelector(".ig-post");
     const amount = card ? card.getBoundingClientRect().width + 18 : igTrack.clientWidth * 0.8;
     igTrack.scrollBy({ left: dir * amount, behavior: "smooth" });
   };

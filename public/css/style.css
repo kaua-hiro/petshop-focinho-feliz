@@ -506,56 +506,80 @@ textarea:focus-visible {
   padding: 1.4rem 1rem 2rem;
 }
 .ig-track::-webkit-scrollbar { display: none; }
-.polaroid {
-  position: relative;
-  flex: 0 0 208px;
+.ig-post {
+  flex: 0 0 296px;
   scroll-snap-align: start;
   display: block;
-  background: var(--cream-warm);
-  padding: 10px 10px 0;
-  box-shadow: 0 16px 28px -18px rgba(20,32,66,.4);
-  transition: transform .2s ease;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 28px -20px rgba(20,32,66,.35);
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-.polaroid:hover { transform: translateY(-6px); }
-.polaroid__pin {
-  position: absolute;
-  top: -9px;
-  left: 50%;
-  width: 15px;
-  height: 15px;
+.ig-post:hover { transform: translateY(-4px); box-shadow: 0 20px 34px -18px rgba(20,32,66,.45); }
+.ig-post__head {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .7rem .8rem;
+}
+.ig-post__avatar {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: var(--tangerine);
-  transform: translateX(-50%);
-  box-shadow: 0 3px 5px rgba(20,32,66,.35), inset 0 -2px 2px rgba(0,0,0,.15);
+  object-fit: cover;
+  border: 2px solid var(--tangerine);
+  flex: none;
 }
-.polaroid__photo { position: relative; display: block; aspect-ratio: 1/1; background: var(--royal-soft); overflow: hidden; }
-.polaroid__photo img { width: 100%; height: 100%; object-fit: cover; }
-.polaroid__caption {
-  display: block;
-  padding: .8rem .3rem 1.1rem;
-  font-style: italic;
-  font-weight: 500;
-  font-size: .84rem;
-  line-height: 1.35;
+.ig-post__user {
+  font-weight: 700;
+  font-size: .86rem;
   color: var(--ink);
-  text-align: center;
 }
-.polaroid--cta {
+.ig-post__dots { width: 18px; height: 18px; color: var(--ink-soft); margin-left: auto; }
+.ig-post__photo { position: relative; display: block; aspect-ratio: 1/1; background: var(--royal-soft); overflow: hidden; }
+.ig-post__photo img { width: 100%; height: 100%; object-fit: cover; }
+.ig-post__actions {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  padding: .7rem .8rem .3rem;
+}
+.ig-post__actions svg { width: 22px; height: 22px; color: var(--ink); }
+.ig-post__save { margin-left: auto; }
+.ig-post__likes {
+  display: block;
+  padding: .2rem .8rem 0;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.ig-post__caption {
+  display: block;
+  padding: .35rem .8rem 1rem;
+  font-size: .82rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+.ig-post__caption strong { color: var(--ink); font-weight: 700; }
+
+.ig-post--cta {
   background: var(--royal);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  aspect-ratio: 1/1.18;
+  aspect-ratio: 1/1.32;
   padding: 1.5rem 1rem;
   gap: .8rem;
 }
-.polaroid--cta svg { width: 40px; height: 40px; color: var(--tangerine); }
-.polaroid--cta .polaroid__caption { color: #fff; font-style: normal; font-weight: 800; padding: 0; }
+.ig-post--cta svg { width: 40px; height: 40px; color: var(--tangerine); }
+.ig-post__cta-text { color: #fff; font-weight: 800; font-size: .92rem; }
 
 @media (max-width: 640px) {
-  .polaroid { flex-basis: 172px; }
+  .ig-post { flex-basis: 250px; }
 }
 
 .ig-carousel__nav {
