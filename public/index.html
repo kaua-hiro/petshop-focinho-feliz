@@ -58,6 +58,8 @@
 </head>
 <body>
 
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
 <header class="nav" id="nav">
   <a class="nav__mark" href="#top">
     <img src="img/logo.webp" alt="Logotipo Anjos da Guarda Creche &amp; Hotel" width="42" height="42">
@@ -108,13 +110,13 @@
 
   <!-- SERVICOS -->
   <section class="section" id="servicos">
-    <div class="section__head">
+    <div class="section__head" data-reveal>
       <p class="eyebrow">O que fazemos</p>
       <h2>Serviços</h2>
       <p class="section__lede">Três formas de cuidar bem do seu cão — no dia a dia, na viagem e na educação.</p>
     </div>
 
-    <div class="cards">
+    <div class="cards" data-reveal-group>
       <article class="card">
         <span class="card__tab" aria-hidden="true"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 8c-8 0-14 8-14 16 0 10 8 16 14 16s14-6 14-16c0-8-6-16-14-16zm-6 12a3 3 0 110 6 3 3 0 010-6zm12 0a3 3 0 110 6 3 3 0 010-6z"/></svg></span>
         <h3>Creche Canina</h3>
@@ -139,31 +141,31 @@
   <!-- DIFERENCIAIS -->
   <section class="section section--navy">
     <div class="section__inner">
-      <div class="section__head">
+      <div class="section__head" data-reveal>
         <p class="eyebrow eyebrow--light">Por que os tutores confiam</p>
         <h2>Cuidado que parece de família</h2>
       </div>
-      <div class="diffs">
+      <div class="diffs" data-reveal-group>
         <div class="diff">
-          <div class="diff__media"><img src="img/diff-safe.webp" alt="Cão em ambiente seguro e cercado" loading="lazy" width="380" height="475"></div>
+          <div class="diff__media"><img class="fade-img" src="img/diff-safe.webp" alt="Cão em ambiente seguro e cercado" loading="lazy" width="380" height="475"></div>
           <span class="diff__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z"/></svg></span>
           <h3>Ambiente seguro</h3>
           <p>Espaço pensado para o bem-estar e a segurança de cada cão, do maior ao mais arisco.</p>
         </div>
         <div class="diff">
-          <div class="diff__media"><img src="img/diff-attentive.webp" alt="Cuidado atento e carinhoso com o cão" loading="lazy" width="380" height="475"></div>
+          <div class="diff__media"><img class="fade-img" src="img/diff-attentive.webp" alt="Cuidado atento e carinhoso com o cão" loading="lazy" width="380" height="475"></div>
           <span class="diff__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
           <h3>Acompanhamento de perto</h3>
           <p>Equipe presente durante toda a rotina, atenta a cada comportamento e necessidade.</p>
         </div>
         <div class="diff">
-          <div class="diff__media"><img src="img/diff-play.webp" alt="Cão brincando com tutores no parque" loading="lazy" width="380" height="475"></div>
+          <div class="diff__media"><img class="fade-img" src="img/diff-play.webp" alt="Cão brincando com tutores no parque" loading="lazy" width="380" height="475"></div>
           <span class="diff__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></span>
           <h3>Atividades e interação</h3>
           <p>Brincadeiras e socialização equilibradas para gastar energia com saúde.</p>
         </div>
         <div class="diff diff--accent">
-          <div class="diff__media"><img src="img/diff-communication.webp" alt="Tutora sorrindo com o cão no colo dentro da pet shop" loading="lazy" width="380" height="475"></div>
+          <div class="diff__media"><img class="fade-img" src="img/diff-communication.webp" alt="Tutora sorrindo com o cão no colo dentro da pet shop" loading="lazy" width="380" height="475"></div>
           <span class="diff__mark diff__mark--lg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 4H4v16l4-4h12z"/></svg></span>
           <h3>Comunicação com o tutor</h3>
           <p>Você acompanha de perto como foi o dia ou a estadia do seu melhor amigo.</p>
@@ -172,9 +174,34 @@
     </div>
   </section>
 
+  <!-- COMO FUNCIONA -->
+  <section class="section" id="como-funciona">
+    <div class="section__head" data-reveal>
+      <p class="eyebrow">Do primeiro contato à primeira estadia</p>
+      <h2>Como funciona</h2>
+    </div>
+    <ol class="steps" data-reveal-group>
+      <li class="step">
+        <span class="step__n">01</span>
+        <h3>Fale com a gente</h3>
+        <p>Conte a rotina do seu cão pelo WhatsApp e tire todas as suas dúvidas antes de decidir.</p>
+      </li>
+      <li class="step">
+        <span class="step__n">02</span>
+        <h3>Conheça o espaço</h3>
+        <p>Agende uma visita e veja de perto onde e como o seu cão vai passar o dia ou a estadia.</p>
+      </li>
+      <li class="step">
+        <span class="step__n">03</span>
+        <h3>Marque a primeira estadia</h3>
+        <p>Escolha o serviço ideal — creche, hotel ou adestramento — e comece com tranquilidade.</p>
+      </li>
+    </ol>
+  </section>
+
   <!-- MOMENTOS / CARROSSEL INSTAGRAM -->
   <section class="section" id="momentos">
-    <div class="section__head">
+    <div class="section__head" data-reveal>
       <p class="eyebrow">Direto do Instagram</p>
       <h2>Momentos Anjos da Guarda</h2>
       <p class="section__lede">Um recorte do que rola no dia a dia — veja mais no @crecheanjosdaguarda.</p>
@@ -186,37 +213,37 @@
 
         <a class="polaroid" href="https://www.instagram.com/crecheanjosdaguarda/p/Dbts_BJAYmf/" target="_blank" rel="noopener">
           <span class="polaroid__pin" aria-hidden="true"></span>
-          <span class="polaroid__photo"><img src="img/ig-04.webp" alt="Cães socializando no espaço da creche" loading="lazy" width="380" height="380"></span>
+          <span class="polaroid__photo"><img class="fade-img" src="img/ig-04.webp" alt="Cães socializando no espaço da creche" loading="lazy" width="380" height="380"></span>
           <span class="polaroid__caption">diversão, socialização e adestramento — todo santo dia</span>
         </a>
 
         <a class="polaroid" href="https://www.instagram.com/crecheanjosdaguarda/p/Db0OdnORDIT/" target="_blank" rel="noopener">
           <span class="polaroid__pin" aria-hidden="true"></span>
-          <span class="polaroid__photo"><img src="img/ig-01.webp" alt="Filhote de golden retriever, post de Dia dos Pais" loading="lazy" width="380" height="380"></span>
+          <span class="polaroid__photo"><img class="fade-img" src="img/ig-01.webp" alt="Filhote de golden retriever, post de Dia dos Pais" loading="lazy" width="380" height="380"></span>
           <span class="polaroid__caption">feliz dia dos pais — obrigado por cada passeio e carinho</span>
         </a>
 
         <a class="polaroid" href="https://www.instagram.com/crecheanjosdaguarda/" target="_blank" rel="noopener">
           <span class="polaroid__pin" aria-hidden="true"></span>
-          <span class="polaroid__photo"><img src="img/ig-06.webp" alt="Cão brincando em piso de grama sintética no espaço da creche" loading="lazy" width="380" height="380"></span>
+          <span class="polaroid__photo"><img class="fade-img" src="img/ig-06.webp" alt="Cão brincando em piso de grama sintética no espaço da creche" loading="lazy" width="380" height="380"></span>
           <span class="polaroid__caption">mais que um lugar, um espaço de amor e cuidado</span>
         </a>
 
         <a class="polaroid" href="https://www.instagram.com/crecheanjosdaguarda/" target="_blank" rel="noopener">
           <span class="polaroid__pin" aria-hidden="true"></span>
-          <span class="polaroid__photo"><img src="img/ig-07.webp" alt="Cão brincando com água no espaço da creche" loading="lazy" width="380" height="380"></span>
+          <span class="polaroid__photo"><img class="fade-img" src="img/ig-07.webp" alt="Cão brincando com água no espaço da creche" loading="lazy" width="380" height="380"></span>
           <span class="polaroid__caption">diversão refrescante todo dia</span>
         </a>
 
         <a class="polaroid" href="https://www.instagram.com/crecheanjosdaguarda/p/Dbdj8tWkYrq/" target="_blank" rel="noopener">
           <span class="polaroid__pin" aria-hidden="true"></span>
-          <span class="polaroid__photo"><img src="img/ig-02.webp" alt="Cães durante sessão de adestramento canino" loading="lazy" width="380" height="380"></span>
+          <span class="polaroid__photo"><img class="fade-img" src="img/ig-02.webp" alt="Cães durante sessão de adestramento canino" loading="lazy" width="380" height="380"></span>
           <span class="polaroid__caption">comando, disciplina e confiança: um cão equilibrado é uma vida feliz</span>
         </a>
 
         <a class="polaroid" href="https://www.instagram.com/crecheanjosdaguarda/reel/Db6H1T3x-4v/" target="_blank" rel="noopener">
           <span class="polaroid__pin" aria-hidden="true"></span>
-          <span class="polaroid__photo"><img src="img/ig-03.webp" alt="Reel: três cães em um carro brincando" loading="lazy" width="380" height="380"></span>
+          <span class="polaroid__photo"><img class="fade-img" src="img/ig-03.webp" alt="Reel: três cães em um carro brincando" loading="lazy" width="380" height="380"></span>
           <span class="polaroid__caption">sai da frente que estamos chegando</span>
         </a>
 
@@ -233,13 +260,13 @@
 
   <!-- PLANOS / VALORES -->
   <section class="section" id="valores">
-    <div class="section__head">
+    <div class="section__head" data-reveal>
       <p class="eyebrow">Planos</p>
       <h2>Valores sob medida pro seu cão</h2>
       <p class="section__lede">Cada cão tem uma rotina diferente — por isso preferimos falar dos valores com calma, pelo WhatsApp.</p>
     </div>
 
-    <div class="plans">
+    <div class="plans" data-reveal-group>
       <div class="plan">
         <h3>Creche Canina</h3>
         <p>Diária ou pacote mensal, com atividades e acompanhamento durante o dia.</p>
@@ -266,26 +293,26 @@
 
   <!-- FAQ -->
   <section class="section" id="faq">
-    <div class="section__head">
+    <div class="section__head" data-reveal>
       <p class="eyebrow">Dúvidas comuns</p>
       <h2>Perguntas frequentes</h2>
     </div>
-    <div class="faq">
+    <div class="faq" data-reveal-group>
       <details class="faq-item">
         <summary>Preciso agendar uma visita antes de matricular meu cão?</summary>
-        <p>Recomendamos conversar com a gente pelo WhatsApp primeiro — assim entendemos a rotina e o perfil do seu cão antes da primeira visita.</p>
+        <div class="faq-item__body"><p>Recomendamos conversar com a gente pelo WhatsApp primeiro — assim entendemos a rotina e o perfil do seu cão antes da primeira visita.</p></div>
       </details>
       <details class="faq-item">
         <summary>Vocês atendem cães de todos os portes?</summary>
-        <p>Fale com a nossa equipe sobre o porte, idade e comportamento do seu cão para confirmarmos a melhor forma de acompanhamento.</p>
+        <div class="faq-item__body"><p>Fale com a nossa equipe sobre o porte, idade e comportamento do seu cão para confirmarmos a melhor forma de acompanhamento.</p></div>
       </details>
       <details class="faq-item">
         <summary>Como funciona o adestramento?</summary>
-        <p>O trabalho é voltado à educação, obediência e correção de comportamentos indesejados, com orientação direta para você entender melhor o seu cão.</p>
+        <div class="faq-item__body"><p>O trabalho é voltado à educação, obediência e correção de comportamentos indesejados, com orientação direta para você entender melhor o seu cão.</p></div>
       </details>
       <details class="faq-item">
         <summary>Como faço para consultar os valores?</summary>
-        <p>É só clicar em "Consulte os Valores" em qualquer parte do site — você será direcionado direto para o nosso WhatsApp.</p>
+        <div class="faq-item__body"><p>É só clicar em "Consulte os Valores" em qualquer parte do site — você será direcionado direto para o nosso WhatsApp.</p></div>
       </details>
     </div>
   </section>
@@ -293,7 +320,7 @@
   <!-- CONTATO -->
   <section class="section" id="contato">
     <div class="contact">
-      <div>
+      <div data-reveal>
         <p class="eyebrow">Fale com a gente</p>
         <h2>Contato</h2>
         <div class="contact__list">
@@ -378,6 +405,16 @@
   <!-- CTA -->
   <section class="cta" id="agendar">
     <div class="cta__inner">
+      <div class="dog-draw" data-dog-draw aria-hidden="true">
+        <svg viewBox="0 0 323.86 133.382">
+          <path d="m74.18 4.915l19.116 26.352 21.168 14.76 41.112-1.548 35.389-4.14 44.711 20.16 36.18 9.036 28.908-7.236 23.004-14.976-17.02 20.124-20.16 10.367-28.691 0.253-14.725-1.837-10.08 23.005 12.385 4.14 1.295 17.063 14.221 4.393-13.176 6.696-16.273-18.864-17.314-4.393 4.139 7.524-24.299 17.568-16.273-1.296-1.043-9.036 9.828 0.252 18.072-11.628-11.34-8.028-4.141-9.828h-17.568l-35.424 11.124-1.8 10.872 20.16-1.044-6.444 11.88-18.864 0.504-13.464-22.464-0.504 8.28-19.368 8.496-6.984 8.819-24.3 1.801 3.888-10.332 13.428 1.296 10.332-17.316-5.436-5.688-0.252-10.08-15.48-18.864-10.392-15.519-6.696 4.932-5.94-6.732v-15.264l-38.772-10.044-9.288-13.464 2.052-6.192h27.396l6.732-8.784 37.98 4.896z"/>
+          <path d="m189.67 42.391l43.668 19.116 38.52 9.576 30.996-8.028 12.672-9.036-10.619 12.132-19.621 9.828-28.691-0.252-13.176-1.8-5.184-5.939-14.184-8.532-14.473-0.252-17.064 10.332-5.688 10.08 1.547 11.376-19.619 0.756-32.58 11.376 1.836-17.316-18.864-6.191 16.02 8.531-3.132 28.404 17.064 0.252-2.844 8.028-16.02 0.252-16.524-25.056-19.94-15.257 19.404 19.404-18.612-8.28-7.236-8.027-25.052-33.304 13.68-13.212-8.784-26.604 4.644 25.848-18.072 17.064-4.14-5.184-0.504-13.428 6.948-25.056-8.784 22.212-37.188-8.784-6.984-11.628 5.94-1.044 1.8-4.896h20.664l5.184-7.776 36.432 4.14 18.36 25.848 21.168 15.516 42.372-0.792 34.64-4.392z"/>
+          <path d="m38.504 8.047l7.776 0.756-5.976 1.296-0.504 4.896-3.6-1.8 2.304-5.148z"/>
+          <path d="m92.252 97.687l20.952 8.532 0.504 5.94-20.664 7.487-4.932 8.532-20.916 1.8 2.592-6.191 13.428 0.252 11.628-18.864-6.192-5.939-0.288-5.94 3.896 4.386z"/>
+          <path d="m241.87 74.179l-4.391-4.896-9.037-4.932-5.184-3.096-11.375-0.504-16.525 8.784-5.939 10.584 1.549 13.176 3.096 8.532 12.672 9.828-18.361 13.176-9.539-0.252 0.504 5.147 12.672 1.801 22.465-16.524-4.645-10.584 12.133-10.332 8.279-1.548 11.62-18.381z"/>
+          <path d="m230.49 94.843l-6.695 0.792-11.125 8.532 1.297 3.348 19.115 4.393 11.377 17.063 10.08-3.384-8.533-3.348-4.645-18.36-10.367-3.6 4.428-11.88-4.95 6.443z"/>
+        </svg>
+      </div>
       <p class="eyebrow eyebrow--light">Vagas abertas essa semana</p>
       <h2>Seu cão merece<br><em>um anjo da guarda.</em></h2>
       <p class="cta__lede">Fale com a gente e consulte os valores da creche, do hotel e do adestramento.</p>
@@ -429,6 +466,15 @@
   <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.9c1.8 1 3.9 1.5 6.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-2.1 0-4.1-.6-5.8-1.6l-.4-.2-4.6 1.1 1.2-4.5-.3-.5A9.7 9.7 0 015.8 15c0-5.6 4.6-10.2 10.2-10.2S26.2 9.4 26.2 15 21.6 24.8 16 24.8zm5.6-7.6c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.2 3.3 5.3 4.6.7.3 1.3.5 1.8.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
 </a>
 
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Fechar">✕</button>
+  <figure class="lightbox__figure">
+    <img id="lightboxImg" src="" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+  <a class="btn btn--primary" id="lightboxLink" href="https://www.instagram.com/crecheanjosdaguarda" target="_blank" rel="noopener">Ver no Instagram →</a>
+</div>
+
 <div class="cookie-bar" id="cookieBar" role="dialog" aria-live="polite">
   <p>Usamos cookies para melhorar sua experiência e medir o desempenho do site. Ao continuar, você concorda com nossa política.</p>
   <button class="btn btn--primary" id="cookieAccept" type="button">Entendi</button>
@@ -443,6 +489,7 @@
   gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/motion@13.2.0/dist/motion.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
