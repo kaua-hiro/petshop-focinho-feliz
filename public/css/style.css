@@ -493,6 +493,19 @@ textarea:focus-visible {
 @media (max-width: 980px) { .diffs { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .diffs { grid-template-columns: 1fr; } }
 
+/* ============ galeria: grid of real client photos ============ */
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.gallery-grid__item {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  box-shadow: 0 8px 20px rgba(20, 20, 40, 0.08);
+}
+.gallery-grid__item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+@media (max-width: 980px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
 /* ============ momentos: a corkboard of pinned photos, not a copied app UI ============ */
 .ig-carousel { position: relative; }
 .ig-track {
