@@ -193,6 +193,7 @@ if (lightbox) {
     lbLink.href = card.href;
     lightbox.classList.add("is-open");
     lightbox.setAttribute("aria-hidden", "false");
+    lightbox.removeAttribute("inert");
     if (hasMotion) {
       window.Motion.animate(
         ".lightbox__figure",
@@ -204,6 +205,7 @@ if (lightbox) {
   const closeLightbox = () => {
     lightbox.classList.remove("is-open");
     lightbox.setAttribute("aria-hidden", "true");
+    lightbox.setAttribute("inert", "");
   };
 
   document.querySelectorAll(".ig-post:not(.ig-post--cta)").forEach((card) => {
