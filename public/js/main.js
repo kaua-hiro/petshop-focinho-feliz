@@ -57,27 +57,37 @@ if (hasMotion) {
   }
 }
 
-// ---- scroll reveal ----
+// ---- scroll reveal: "gate lift" — content rises out from behind a clipped
+// edge, like a kennel gate opening, echoing the diagonal die-cuts used
+// elsewhere on the page instead of a generic fade+drift ----
 if (hasMotion) {
-  const { inView, animate, stagger, spring } = window.Motion;
-  const revealKeyframes = { opacity: [0, 1], transform: ["translateY(22px)", "translateY(0px)"] };
-  const revealOptions = { type: spring, bounce: 0.2, duration: 600 };
+  const { inView, animate, stagger } = window.Motion;
+  const revealKeyframes = {
+    clipPath: ["inset(100% 0% 0% 0%)", "inset(0% 0% 0% 0%)"],
+    transform: ["scale(1.035)", "scale(1)"],
+  };
+  // service cards carry a pennant tab that pokes out above their own box —
+  // clipping the card would slice the tab off, so those settle in with a
+  // plain rise instead of the gate-lift cut
+  const softKeyframes = { opacity: [0, 1], transform: ["translateY(14px)", "translateY(0px)"] };
+  const revealOptions = { duration: 0.5, easing: [0.16, 1, 0.3, 1] };
 
   document.querySelectorAll("[data-reveal-group]").forEach((group) => {
+    const keyframes = group.matches(".cards") ? softKeyframes : revealKeyframes;
     inView(group, () => {
-      animate(Array.from(group.children), revealKeyframes, { ...revealOptions, delay: stagger(0.08) });
-    }, { amount: 0.2, margin: "0px 0px -60px 0px" });
+      animate(Array.from(group.children), keyframes, { ...revealOptions, delay: stagger(0.055) });
+    }, { amount: 0.1, margin: "0px 0px 80px 0px" });
   });
 
   document.querySelectorAll("[data-reveal]").forEach((el) => {
-    inView(el, () => { animate(el, revealKeyframes, revealOptions); }, { amount: 0.2, margin: "0px 0px -60px 0px" });
+    inView(el, () => { animate(el, revealKeyframes, revealOptions); }, { amount: 0.1, margin: "0px 0px 80px 0px" });
   });
 } else if (!prefersReducedMotion && "IntersectionObserver" in window) {
   // fallback: plain CSS transition reveal if Motion didn't load
   document.querySelectorAll("[data-reveal-group]").forEach((group) => {
     Array.from(group.children).forEach((el, i) => {
       el.classList.add("reveal");
-      el.style.transitionDelay = `${Math.min(i * 90, 360)}ms`;
+      el.style.transitionDelay = `${Math.min(i * 45, 220)}ms`;
     });
   });
   document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("reveal"));
@@ -91,7 +101,7 @@ if (hasMotion) {
         }
       });
     },
-    { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    { threshold: 0.1, rootMargin: "0px 0px 80px 0px" }
   );
   document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 }

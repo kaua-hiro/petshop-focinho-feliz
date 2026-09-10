@@ -102,7 +102,7 @@ textarea:focus-visible {
 }
 
 /* ============ lazy image fade-in ============ */
-.fade-img { opacity: 0; transition: opacity .6s ease; }
+.fade-img { opacity: 0; transition: opacity .3s ease; }
 .fade-img.is-loaded { opacity: 1; }
 
 /* ============ nav ============ */
@@ -437,10 +437,21 @@ textarea:focus-visible {
 @media (max-width: 980px) { .cards { grid-template-columns: 1fr; } }
 
 /* ============ scroll reveal ============ */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.is-visible { opacity: 1; transform: none; }
-/* higher-specificity override so components keep their own hover transition speed */
-.card.reveal { transition: opacity .5s ease, transform .3s ease, border-color .2s ease; }
+.reveal {
+  clip-path: inset(100% 0% 0% 0%);
+  transform: scale(1.035);
+  transition: clip-path .45s cubic-bezier(0.16, 1, 0.3, 1), transform .45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible { clip-path: inset(0% 0% 0% 0%); transform: none; }
+/* service cards carry a pennant tab poking out above the box — clipping
+   would slice it off, so they fall back to a plain rise instead */
+.card.reveal {
+  clip-path: none;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .35s ease, transform .35s ease, border-color .2s ease;
+}
+.card.reveal.is-visible { opacity: 1; transform: none; }
 
 /* ============ como funciona (a real sequence, numbered) ============ */
 .steps {
